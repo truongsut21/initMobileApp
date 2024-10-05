@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { setName } from './redux/reducer/user'; // Đảm bảo đường dẫn đúng
+import { Button } from '@ant-design/react-native';
 
 const MyApp = () => {
     const dispatch = useDispatch();
@@ -17,6 +18,7 @@ const MyApp = () => {
             <TouchableOpacity style={styles.button} onPress={updateName}>
                 <Text style={styles.buttonText}>Update Name</Text>
             </TouchableOpacity>
+            <Button type="primary">Click Me</Button>
         </View>
     );
 };
