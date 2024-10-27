@@ -2,14 +2,17 @@
 import React, {useState} from 'react';
 import {View, TextInput, Button, StyleSheet, Text} from 'react-native';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Logic để xử lý đăng nhập
+    // Logic để xử lý đăng nhập, có thể kiểm tra thông tin người dùng ở đây
     console.log('Username:', username);
     console.log('Password:', password);
+
+    // Chuyển hướng đến Home nếu đăng nhập thành công
+    navigation.navigate('Home');
   };
 
   return (
